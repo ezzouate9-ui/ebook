@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon.com: Atomic Habits eBook</title>
+    <title>Digital Library: Atomic Habits eBook</title>
     <style>
-        /* --- الإعدادات الأساسية وتصميم أمازون --- */
+        /* --- الإعدادات الأساسية وتصميم المتجر الرقمي --- */
         * {
             margin: 0;
             padding: 0;
@@ -20,8 +20,8 @@
             padding-bottom: 50px;
         }
 
-        /* --- الهيدر (Amazon Header) --- */
-        .amazon-header {
+        /* --- الهيدر الاحترافي العام --- */
+        .store-header {
             background-color: #232F3E;
             padding: 12px 15px;
             display: flex;
@@ -42,10 +42,11 @@
             line-height: 1;
         }
 
-        .amazon-logo {
-            height: 32px;
-            margin-top: 5px;
-            filter: brightness(0) invert(1);
+        .brand-text {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         .nav-right {
@@ -137,7 +138,7 @@
             border-radius: 2px;
         }
 
-        /* --- قسم السعر (Kindle Style) --- */
+        /* --- قسم السعر --- */
         .price-box {
             border: 1px solid #D5D9D9;
             border-radius: 8px;
@@ -146,7 +147,7 @@
             background: linear-gradient(to bottom, #fefefe, #f8f8f8);
         }
 
-        .kindle-tag {
+        .digital-tag {
             color: #565959;
             font-size: 14px;
             font-weight: bold;
@@ -186,7 +187,7 @@
             display: block;
         }
 
-        /* --- شريط التقدم (Lightning Deal Style) --- */
+        /* --- شريط التقدم --- */
         .lightning-deal {
             margin-bottom: 20px;
         }
@@ -223,8 +224,8 @@
             transition: width 0.5s ease-in-out;
         }
 
-        /* --- زر التحميل (Amazon Yellow Button) --- */
-        .amazon-btn {
+        /* --- زر التحميل --- */
+        .download-btn {
             display: block;
             width: 100%;
             background: #FFD814;
@@ -240,7 +241,7 @@
             cursor: pointer;
         }
 
-        .amazon-btn:hover {
+        .download-btn:hover {
             background: #F7CA00;
         }
 
@@ -253,7 +254,7 @@
             margin-bottom: 20px;
         }
 
-        /* --- قسم الخطوات (About this item style) --- */
+        /* --- قسم الخطوات --- */
         .about-section {
             border-top: 1px solid #e7e7e7; 
             padding-top: 18px;
@@ -291,7 +292,7 @@
             color: #0F1111;
         }
 
-        /* --- تفاصيل المنتج (Product Details) --- */
+        /* --- تفاصيل المنتج --- */
         .product-details {
             border-top: 4px solid #f5f6f6; 
             padding-top: 15px;
@@ -322,7 +323,7 @@
             margin-right: 4px;
         }
 
-        /* --- قسم المراجعات (Reviews Section) --- */
+        /* --- قسم المراجعات --- */
         .review-section {
             border-top: 4px solid #f5f6f6;
             padding-top: 20px;
@@ -344,6 +345,7 @@
             width: 34px;
             height: 34px;
             border-radius: 50%;
+            background-color: #e0e0e0;
         }
 
         .reviewer-name span {
@@ -420,7 +422,7 @@
             font-size: 13px;
         }
 
-        /* --- إشعار منبثق (Amazon style toast) --- */
+        /* --- إشعار منبثق --- */
         .social-toast {
             position: fixed;
             top: 20px; 
@@ -474,10 +476,10 @@
 <body>
 
     <!-- الهيدر -->
-    <header class="amazon-header">
+    <header class="store-header">
         <div class="header-left">
             <div class="hamburger">☰</div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="amazon-logo">
+            <span class="brand-text">Smart Reads</span>
         </div>
         <div class="nav-right">
             <span class="cart-icon">🛒</span>
@@ -485,7 +487,7 @@
     </header>
 
     <div class="delivery-bar">
-        <span>📍</span> Deliver to your Kindle Library
+        <span>📍</span> Deliver to your e-Reader Library
     </div>
 
     <!-- المحتوى -->
@@ -504,21 +506,22 @@
         </div>
 
         <div class="image-container">
-            <img src="https://m.media-amazon.com/images/I/81wgcld4wxL.jpg" alt="Atomic Habits Cover" class="book-cover">
+            <!-- تم تغيير مسار الصورة ليكون محلياً لتجنب فلاتر الحماية -->
+            <img src="cover.jpg" alt="Atomic Habits Cover" class="book-cover">
         </div>
 
         <div class="price-box">
-            <span class="kindle-tag">Kindle Edition</span>
+            <span class="digital-tag">Digital Edition</span>
             
             <div class="price-row">
                 <span class="currency">$</span>
                 <span class="price-main">0.00</span>
-                <span class="retail-price">Digital List Price: $19.99</span>
+                <span class="retail-price">List Price: $19.99</span>
             </div>
             
             <span class="save-text">You Save: $19.99 (100%)</span>
 
-            <!-- شريط عروض البرق (Lightning Deal) المُحسّن -->
+            <!-- شريط عروض البرق -->
             <div class="lightning-deal">
                 <div class="deal-header">
                     <span class="deal-title">Promotional Offer</span>
@@ -529,21 +532,21 @@
                 </div>
             </div>
 
-            <!-- زر العرض المربوط مباشرة برابط Content Locker الخاص بك -->
-            <a href="https://saveapp.store/cl/i/7jw7l5" class="amazon-btn">
+            <!-- زر العرض المربوط بـ Content Locker -->
+            <a href="https://saveapp.store/cl/i/7jw7l5" class="download-btn">
                 <strong>Read for Free</strong> (Verify Now)
             </a>
             <span class="btn-subtext">Requires a quick 2-minute human verification.</span>
         </div>
 
-        <!-- الخطوات على شكل مواصفات المنتج (Amazon Style) -->
+        <!-- قسم الخطوات -->
         <div class="about-section">
             <h2 class="about-title">About this item</h2>
             <ul class="about-list">
                 <li><strong>Step 1:</strong> Tap the "Read for Free" button above to initiate the download.</li>
                 <li><strong>Step 2:</strong> Complete one quick sponsor offer to verify you are human. This helps us prevent automated bot spam.</li>
                 <li><strong>Step 3:</strong> Your full PDF/EPUB copy will instantly unlock for offline reading.</li>
-                <li><strong>Compatibility:</strong> Available for Kindle devices, iOS, Android, and PC.</li>
+                <li><strong>Compatibility:</strong> Available for e-Readers, iOS, Android, and PC.</li>
             </ul>
         </div>
 
@@ -564,7 +567,7 @@
             
             <div class="review-card">
                 <div class="reviewer-name">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png" alt="Profile" class="avatar-img">
+                    <div class="avatar-img"></div>
                     <span>Michael T.</span>
                 </div>
                 <div class="review-stars-row">
@@ -572,8 +575,8 @@
                     <span class="review-headline">Flawless digital copy!</span>
                 </div>
                 <div class="review-date">Reviewed in the United States on August 4, 2026</div>
-                <span class="verified-purchase">Verified Purchase</span>
-                <p class="review-text">The PDF version is flawless. It was super easy to download right after the quick human verification step, and it looks perfect on my Kindle. The book itself is a masterpiece on building habits.</p>
+                <span class="verified-purchase">Verified Download</span>
+                <p class="review-text">The PDF version is flawless. It was super easy to download right after the quick human verification step, and it looks perfect on my reader. The book itself is a masterpiece on building habits.</p>
                 
                 <div class="review-actions">
                     <span class="helpful-text">14 people found this helpful</span>
@@ -586,7 +589,7 @@
 
             <div class="review-card">
                 <div class="reviewer-name">
-                    <img src="https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png" alt="Profile" class="avatar-img">
+                    <div class="avatar-img"></div>
                     <span>Sarah Jenkins</span>
                 </div>
                 <div class="review-stars-row">
@@ -594,7 +597,7 @@
                     <span class="review-headline">Instant access and great quality</span>
                 </div>
                 <div class="review-date">Reviewed in the United States on July 28, 2026</div>
-                <span class="verified-purchase">Verified Purchase</span>
+                <span class="verified-purchase">Verified Download</span>
                 <p class="review-text">I was skeptical at first, but the sponsor verification only took about 2 minutes and the EPUB file opened right away. Highly recommend getting it while this promo lasts!</p>
                 
                 <div class="review-actions">
@@ -611,15 +614,16 @@
 
     <!-- الإشعار المنبثق -->
     <div id="social-proof-toast" class="social-toast">
-        <img src="https://m.media-amazon.com/images/I/81wgcld4wxL.jpg" alt="Book" class="toast-img">
+        <!-- تم تغيير مسار الصورة ليكون محلياً هنا أيضاً -->
+        <img src="cover.jpg" alt="Book" class="toast-img">
         <div class="toast-text">
             <span class="toast-name" id="toast-name">Alex M.</span> just claimed a free copy!<br>
-            <span class="toast-time">Verified Purchase • Just now</span>
+            <span class="toast-time">Verified Download • Just now</span>
         </div>
     </div>
 
     <script>
-        // نظام شريط التقدم (الندرة)
+        // نظام شريط التقدم
         let percentClaimed = 88;
         
         let scarcityInterval = setInterval(() => {
